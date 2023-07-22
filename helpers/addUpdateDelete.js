@@ -19,7 +19,9 @@ const addDepartment = () =>{
         //sql query to add department to department table
         db.query(
             "INSERT INTO department (name) VALUES (?)", answer.departmentName, (err)=>{
-                if (err) throw err;
+                if (err) {
+                    console.log(err);
+                  }
                 console.log(`${answer.departmentName} added successfully`)
                 viewDepartments();
             }
@@ -53,7 +55,9 @@ const addRole = () =>{
     .then((answers)=>{
         db.query(
             "INSERT INTO role (title,salary,department_id) VALUES (?,?,?)", [answers.newRole,answers.newSalary,answers.deptId], (err)=>{
-                if (err) throw err;
+                if (err) {
+                    console.log(err);
+                  }
                 console.log(`${answers.newRole} added successfully`);
                 viewRoles();
             }
@@ -95,18 +99,66 @@ const addEmployee = () =>{
     //sql query to add employee info
     .then((answers)=>{
         db.query(
-            "INSERT INTO employee (first_name,last_name,role_id,manager_id VALUES (?,?,?,?)", [answers.firstName,answers.lastName,answers.roleId,answers.managerId], (err)=>{
-                if(err) throw err;
+            "INSERT INTO employee (first_name,last_name,role_id,manager_id) VALUES (?,?,?,?)", [answers.firstName,answers.lastName,answers.roleId,answers.managerId], (err)=>{
+                if (err) {
+                    console.log(err);
+                  }
                 console.log(`New employee ${answers.firstName} ${answers.lastName} added succesfully`);
+                viewEmployees();
+            }
+        )}
+    )};
+
+const updateEmployeeRole = () => {
+    //inq prompt to gather info
+    inquirer
+    .prompt([
+        {
+            type: "input",
+            message: "Please enter the employee ID",
+            name: "empIdUpdate"
+        },
+        {
+            type: "input",
+            message: "Please enter the new role ID for this employee",
+            name: "updatedRoleId"
+        }
+
+    ])
+    //sql query to update role
+    .then((answers)=>{
+        db.query(
+            "UPDATE employee SET role_id=? WHERE id=?", [answers.updatedRoleId, answers.empIdUpdate], (err)=>{
+                if (err){
+                    console.log(err);
+                }
+                console.log(`Employee (ID#${answers.empIdUpdate}) role successfully updated`)
                 viewEmployees();
             }
         )
     })
-};
 
-const updateEmployeeRole = () => {
-    //inq prompt to gather info
-    //sql query to update role
 }
 
-module.exports = { addDepartment, addRole, addEmployee, updateEmployeeRole };
+const deleteSomething = ()=>{
+    //inquirer prompt to see if they want to delete dept, role, or employee
+    //.then, switch case for which option they chose
+    //calls function based on what option they chose
+};
+
+const deleteDepartment = ()=>{
+    //inquirer prompt for dept id
+    //sql query to delete that dept
+};
+
+const deleteRole = ()=>{
+    //inquirer prompt for role id
+    //sql query to delete that role
+};
+
+const deleteEmployee = ()=>{
+    //inquirer prompt for emp id
+    //sql query to delete that emp
+};
+
+module.exports = { addDepartment, addRole, addEmployee, updateEmployeeRole, deleteSomething };

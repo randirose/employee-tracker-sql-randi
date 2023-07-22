@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const { viewDepartments, viewRoles, viewEmployees } = require('./viewAll.js');
-const { addDepartment, addRole, addEmployee, updateEmployeeRole } = require('./addUpdateDelete.js');
+const { addDepartment, addRole, addEmployee, updateEmployeeRole, deleteSomething } = require('./addUpdateDelete.js');
 
 const mainMenu = ()=>{
     inquirer
@@ -51,6 +51,8 @@ const mainMenu = ()=>{
             case 'Update an employee role':
                 updateEmployeeRole();
                 break;
+            case 'Delete departments, roles, or employees':
+                deleteSomething();
             case 'Exit':
                 db.end();
                 break;

@@ -13,5 +13,19 @@ const db = mysql.createConnection({
     socketPath: "/tmp/mysql.sock"
 }, ()=>{
     console.log(`connected to ${database} database`);
-    mainMenu();
+});
+
+//sql query to run schema and seeds to set up db
+db.query('SOURCE db/schema.sql;', (err, results)=>{
+    if(err){
+        res.json({message: "error running schema.sql",error:true});
+    }
+    res.json(results);
+    db.query('SOURCE db/seeds.sql;', (err, results)=>{
+        if(err){
+            res.json({message: "error running seeds.sql", error:true})
+        }
+        res.json(results);
+        mainMenu();
+    })
 });

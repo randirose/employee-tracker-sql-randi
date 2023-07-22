@@ -140,6 +140,7 @@ const updateEmployeeRole = () => {
 
 }
 
+//**BONUS FEATURES */
 const deleteSomething = ()=>{
     //inquirer prompt to see if they want to delete dept, role, or employee
     //.then, switch case for which option they chose

@@ -27,5 +27,9 @@ const viewEmployees=()=>{
         // mainMenu();
     })
 };
+//**BONUS FEATURE */
+const viewEmpByDepartment=()=>{
+    //sql query to view employees by department
+}
 
-module.exports = { viewDepartments, viewRoles, viewEmployees };
+module.exports = { viewDepartments, viewRoles, viewEmployees, viewEmpByDepartment };

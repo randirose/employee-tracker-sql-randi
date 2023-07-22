@@ -143,23 +143,109 @@ const updateEmployeeRole = () => {
 //**BONUS FEATURES */
 const deleteSomething = ()=>{
     //inquirer prompt to see if they want to delete dept, role, or employee
+    inquirer
+    .prompt([
+        {
+            type: "list",
+            message: "What would you like to remove from the database?",
+            name: "deleteChoice",
+            choices:[
+                'Remove department',
+                'Remove role',
+                'Remove employee'
+            ]
+        }
+    ])
     //.then, switch case for which option they chose
+    .then((answers)=>{
+        console.log(`You have chosen to ${answers.deleteChoice}`);
+
+        switch (answers.deleteChoice){
+            case 'Remove department':
+                deleteDepartment();
+                break;
+            case 'Remove role':
+                deleteRole();
+                break;
+            case 'Remove employee':
+                deleteEmployee();
+                break;
+        }
+    })
     //calls function based on what option they chose
 };
 
 const deleteDepartment = ()=>{
     //inquirer prompt for dept id
+    inquirer
+    .prompt(
+        {
+            type: "input",
+            message: "Please enter the department ID you'd like to remove",
+            name: "removeDept"
+        }
+    )
     //sql query to delete that dept
+    .then((answer)=>{
+        db.query(
+            "DELETE FROM department WHERE id = ?", answer.removeDept, (err)=>{
+                if (err) {
+                    console.log("Cannot remove department; Please remove any employees/roles assigned this role first");
+                    deleteSomething();
+                } else {
+                console.log(`Department (ID#${answer.removeDept}) succesfully removed from database`);
+                viewDepartments();
+            }
+        }
+    )})
 };
 
 const deleteRole = ()=>{
     //inquirer prompt for role id
+    inquirer
+    .prompt(
+        {
+            type: "input",
+            message: "Please enter the role ID you'd like to remove",
+            name: "removeRole"
+        }
+    )
     //sql query to delete that role
+    .then((answer)=>{
+        db.query(
+            "DELETE FROM role WHERE id = ?", answer.removeRole, (err)=>{
+                if (err) {
+                    console.log("Cannot remove role; Please remove any employees assigned this role first");
+                    deleteSomething();
+                } else {
+                console.log(`Role (ID#${answer.removeRole}) succesfully removed from database`);
+                viewRoles();
+                }
+            }
+        )
+    })
 };
 
 const deleteEmployee = ()=>{
     //inquirer prompt for emp id
+    inquirer
+    .prompt(
+        {
+            type: "input",
+            message: "Please enter the employee ID you'd like to remove",
+            name: "removeEmp"
+        }
+    )
     //sql query to delete that emp
+    .then((answer)=>{
+        db.query(
+            "DELETE FROM employee WHERE id = ?", answer.removeEmp, (err)=>{
+                if (err) throw err;
+                console.log(`Employee (ID#${answer.removeEmp}) succesfully removed from database`);
+                viewEmployees();
+            }
+        )
+    })
 };
 
 module.exports = { addDepartment, addRole, addEmployee, updateEmployeeRole, deleteSomething };

@@ -29,7 +29,8 @@ const viewEmployees=()=>{
 };
 //**BONUS FEATURE */
 const viewEmpByDepartment=()=>{
-    //sql query to view employees by department
+    //inq prompt to get dept ID
+    //sql query to view employees by that department (join)
 }
 
 module.exports = { viewDepartments, viewRoles, viewEmployees, viewEmpByDepartment };

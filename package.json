@@ -1,0 +1,16 @@
+{
+  "name": "employee-tracker-sql-randi",
+  "version": "1.0.0",
+  "description": "module 12 SQL challenge",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "mysql2": "^3.5.2"
+  }
+}

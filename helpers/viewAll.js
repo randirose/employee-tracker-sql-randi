@@ -1,18 +1,31 @@
 const inquirer = require('inquirer');
 const mysql = require('mysql2');
-const db = require('../server.js');
+const db = require('../db/connection');
+const cTable = require('console.table');
+const mainMenu = require('./mainMenu.js');
 
 const viewDepartments=()=>{
     db.query('SELECT * FROM department;', (err,results)=>{
         if (err) throw err;
-        console.log(results);
+        console.table(results);
+        // mainMenu();
+    });
+    
+};
+
+const viewRoles=()=>{
+    db.query('SELECT * FROM role;', (err,results)=>{
+        if (err) throw err;
+        console.table(results);
+        // mainMenu();
     })
 };
-const viewRoles=()=>{
-    //sql query to show departments table
-};
 const viewEmployees=()=>{
-    //sql query to show departments table
+    db.query('SELECT * FROM employee;', (err,results)=>{
+        if (err) throw err;
+        console.table(results);
+        // mainMenu();
+    })
 };
 
 module.exports = { viewDepartments, viewRoles, viewEmployees };

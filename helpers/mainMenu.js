@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const { viewDepartments, viewRoles, viewEmployees } = require('./viewAll.js');
-const { addDepartment, addRole, addEmployee, updateEmployeeRole } = require('./addOrUpdate.js');
+const { addDepartment, addRole, addEmployee, updateEmployeeRole } = require('./addUpdateDelete.js');
 
 const mainMenu = ()=>{
     inquirer
@@ -27,7 +27,7 @@ const mainMenu = ()=>{
     .then((answers)=>{
         //error handling
         //log what user chose
-        console.log(`You chose ${answers.userChoice}`);
+        console.log(`You chose "${answers.userChoice}"`);
         //switch/case for whatever the user chooses, calls whatver function applies to what they chose
         switch (answers.userChoice){
             case 'View all departments':

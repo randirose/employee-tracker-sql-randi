@@ -11,3 +11,10 @@ VALUES
 ('CEO', 100000.00, 2),
 ('Comms Specialist', 40000.00, 3),
 ('Tech Analyst', 60000.00, 4);
+
+INSERT INTO employee (first_name,last_name,role_id)
+VALUES
+('John', 'Smith', 1),
+('Lucy', 'Brown', 2),
+('Sara', 'Johnson', 3),
+('Tad', 'Gonzales', 4);

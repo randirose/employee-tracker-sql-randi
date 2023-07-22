@@ -1,8 +1,12 @@
 const inquirer = require('inquirer');
 const mysql = require('mysql2');
+const db = require('../server.js');
 
 const viewDepartments=()=>{
-    //sql query to show departments table
+    db.query('SELECT * FROM department;', (err,results)=>{
+        if (err) throw err;
+        console.log(results);
+    })
 };
 const viewRoles=()=>{
     //sql query to show departments table

@@ -8,7 +8,7 @@ const viewDepartments=()=>{
     db.query('SELECT * FROM department;', (err,results)=>{
         if (err) throw err;
         console.table(results);
-        // mainMenu();
+        mainMenu();
     });
     
 };
@@ -17,14 +17,14 @@ const viewRoles=()=>{
     db.query('SELECT * FROM role;', (err,results)=>{
         if (err) throw err;
         console.table(results);
-        // mainMenu();
+        mainMenu();
     })
 };
 const viewEmployees=()=>{
     db.query('SELECT * FROM employee;', (err,results)=>{
         if (err) throw err;
         console.table(results);
-        // mainMenu();
+        mainMenu();
     })
 };
 //**BONUS FEATURE */

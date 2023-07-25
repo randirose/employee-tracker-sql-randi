@@ -17,4 +17,6 @@ VALUES
 ('Lucy', 'Brown', 1, null),
 ('John', 'Smith', 2, 1),
 ('Sara', 'Johnson', 3, 2),
-('Tad', 'Gonzales', 4, 1);
+('Tad', 'Gonzales', 4, 1),
+('Jessie', 'Jordan', 3, 2),
+('Kate', 'Moore', 4, 1);

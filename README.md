@@ -62,6 +62,10 @@ Link to walk-through video on Google Drive: https://drive.google.com/file/d/18Bg
 
 
 
+https://github.com/randirose/employee-tracker-sql-randi/assets/128757891/0cdfee0a-2ce7-4cdf-8201-b9a26725a98a
+
+
+
 ![Screenshot of app - 1](assets/screenshot1.png)  
 ![Screenshot of app - 2](assets/screenshot2.png)  
 ![Screenshot of app - 3](assets/screenshot3.png)

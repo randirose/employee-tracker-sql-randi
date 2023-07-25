@@ -73,7 +73,7 @@ This app / CMS has the following features:
 - Add a department: add a department to your database
 - Add a role: add a role to your database
 - Add an employee: add an employee to your database
-- Update an employee role: update an employee role in your database
+- Update an employee role: update an employee role in your database  
 **BONUS FEATURES**
 - View employees by department: select a department and view all employees assigned to that department
 - Delete departments, roles, or employees: delete a department, role or employee

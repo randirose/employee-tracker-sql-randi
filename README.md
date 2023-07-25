@@ -58,7 +58,13 @@ Follow these instructions to use this app:
 - In your CLI, run `node server.js` to invoke the application  
 - See screenshots and the walk-through video below for demonstrations on the app's functionality  
 
-![alt text](assets/images/screenshot.png)
+Link to walk-through video on Google Drive: https://drive.google.com/file/d/18BgXBdCyBf24982JMEzzyg72gd0_SPw-/view  
+
+
+
+![Screenshot of app - 1](assets/screenshot1.png)  
+![Screenshot of app - 2](assets/screenshot2.png)  
+![Screenshot of app - 3](assets/screenshot3.png)
 
 ## Credits
 

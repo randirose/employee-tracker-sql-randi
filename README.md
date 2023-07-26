@@ -58,13 +58,14 @@ Follow these instructions to use this app:
 - In your CLI, run `node server.js` to invoke the application  
 - See screenshots and the walk-through video below for demonstrations on the app's functionality  
 
-Link to walk-through video on Google Drive: https://drive.google.com/file/d/18BgXBdCyBf24982JMEzzyg72gd0_SPw-/view  
+Link to walk-through video on Google Drive: https://drive.google.com/file/d/13qWAnPmMMWDP9TOsOC_cRwSkIp1M9VNi/view   
 
 https://github.com/randirose/employee-tracker-sql-randi/assets/128757891/0cdfee0a-2ce7-4cdf-8201-b9a26725a98a  
 
 ![Screenshot of app - 1](assets/screenshot1.png)  
 ![Screenshot of app - 2](assets/screenshot2.png)  
-![Screenshot of app - 3](assets/screenshot3.png)
+![Screenshot of app - 3](assets/screenshot3.png)  
+![Screenshot of app - 4](assets/screenshot4.png)
 
 ## Credits
 

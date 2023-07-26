@@ -60,11 +60,7 @@ Follow these instructions to use this app:
 
 Link to walk-through video on Google Drive: https://drive.google.com/file/d/13qWAnPmMMWDP9TOsOC_cRwSkIp1M9VNi/view   
 
-  
-
-https://github.com/randirose/employee-tracker-sql-randi/assets/128757891/e16c2897-e071-4e91-8a7e-0210b3790e0a
-
-
+https://github.com/randirose/employee-tracker-sql-randi/assets/128757891/e16c2897-e071-4e91-8a7e-0210b3790e0a  
 
 ![Screenshot of app - 1](assets/screenshot1.png)  
 ![Screenshot of app - 2](assets/screenshot2.png)  
